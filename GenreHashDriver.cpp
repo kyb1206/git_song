@@ -83,7 +83,7 @@ int main()
       getline(cin, sgenre);
       Song *sSong = test.searchSong(stitle, sgenre);
       //cout << "sSong " << sSong->title << endl;
-      test.addSongToLibrary(sSong, curr_user);
+      test.addSongToPlaylist(sSong, curr_user);
     }
     else if(choice == 4)
     {
@@ -93,10 +93,41 @@ int main()
     {
       test.printUserPlaylist(curr_user);
     }
+
     else if(choice == 6)
     {
-      cout << "Feature not ready yet! Stay tuned!" << endl;
+      //cout << "Feature not ready yet! Stay tuned!" << endl;
+      
+      cout << endl;
+      string sMood;
+      int mood;
+      cout << "What do you want?" << endl;
+      cout << "1. Gloomy" << endl;
+      cout << "2. New" << endl;
+      cout << "3. Memory" << endl;
+      cout << "4. Tired" << endl;
+      cout << "5. Love" << endl;
+
+      getline(cin, sMood);
+      mood = stoi(sMood);
+
+      if(mood == 1){
+        cout << "Modern Loneliness - Lauv" << endl;
+      }
+      else if(mood == 2){
+        cout << "Love Like That - Lauv" << endl;
+      }
+      else if(mood == 3){
+        cout << "Never Not - Lauv" << endl;
+      }
+      else if(mood == 4){
+        cout << "I'm so tired... - Lauv" << endl;
+      }
+      else if(mood == 5){
+        cout << "I Like Me Better - Lauv" << endl;
+      }
     }
+
     else if(choice == 7)
     {
       cout << "Feature not ready yet! Stay tuned!" << endl;
